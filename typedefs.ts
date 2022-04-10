@@ -10,13 +10,18 @@ interface generalOptions {
   status?: number;
 }
 
-interface compareOptions extends generalOptions {
+interface compareOptions {
+  message?: string;
+  status?: number;
   compareName?: string;
 }
 
-interface internalOptions extends initialOptions {
-  name?: string;
-  state?: Map<string, boolean>;
+interface internalOptions {
+  soft: boolean;
+  missing?: string;
+  status: number;
+  name: string;
+  state: Map<string, boolean>;
 }
 
 type keyOptions =

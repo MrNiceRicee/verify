@@ -3,9 +3,9 @@ import { generalOptions, internalOptions } from './typedefs';
 import ErrorException from './ErrorException';
 
 interface extra {
-  step?: string;
-  compare?: any;
-  overrideError?: string;
+  step: string;
+  compare?: any | undefined;
+  overrideError?: string | null;
 }
 
 const error = (
@@ -13,7 +13,7 @@ const error = (
   options: generalOptions,
   internal: internalOptions,
   message: string,
-  { step, compare, overrideError }: extra = {}
+  { step, compare, overrideError }: extra
 ) => {
   if (internal.soft) {
     base.error =

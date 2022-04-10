@@ -1,4 +1,4 @@
-const isDefined = (value) => {
+const isDefined = (value: any) => {
   if (
     value === null ||
     value === 'null' ||

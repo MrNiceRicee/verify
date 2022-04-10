@@ -25,14 +25,16 @@ class Base {
   #options: internalOptions;
 
   value: any;
-  type: string;
-  verifiedNumber: Big;
+  type: string | null;
+  verifiedNumber: Big | null;
   error: boolean | string;
   failed: boolean;
   compared: any;
-  steps: (key?: keyOptions) => boolean | Map<string, boolean>;
+  steps: (
+    key: keyOptions | undefined
+  ) => boolean | Map<string, boolean> | undefined;
 
-  constructor(value, options?: initialOptions) {
+  constructor(value: any, options?: initialOptions) {
     this.value = value;
 
     this.#options = {
@@ -47,7 +49,7 @@ class Base {
     this.error = false;
     this.failed = false;
     this.compared = null;
-    this.steps = (key: keyOptions) =>
+    this.steps = (key?: keyOptions) =>
       key ? this.#options.state.get(key) : this.#options.state;
     this.#initialize();
   }
@@ -71,35 +73,35 @@ class Base {
   /**
    * @description checks if value is a boolean
    */
-  isBoolean(options?: generalOptions) {
+  isBoolean(options: generalOptions = {}) {
     return internalBoolean(this, options, this.#options);
   }
 
   /**
    * @description checks if value is a number
    */
-  isNumber(options?: generalOptions) {
+  isNumber(options: generalOptions = {}) {
     return internalNumber(this, options, this.#options);
   }
 
   /**
    * @description checks if value is an int
    */
-  isInt(options?: generalOptions) {
+  isInt(options: generalOptions = {}) {
     return internalInt(this, options, this.#options);
   }
 
   /**
    * @description checks if value is a string
    */
-  isString(options?: generalOptions) {
+  isString(options: generalOptions = {}) {
     return internalString(this, options, this.#options);
   }
 
   /**
    * @description checks if value is an array
    */
-  isArray(options?: generalOptions) {
+  isArray(options: generalOptions = {}) {
     return internalArray(this, options, this.#options);
   }
 
@@ -109,7 +111,7 @@ class Base {
    * @description checks if value is equals to compare
    * @param {any} compare
    */
-  isEquals(compare, options?: compareOptions) {
+  isEquals(compare: any, options: compareOptions = {}) {
     return internalEquals(compare, this, options, this.#options);
   }
 
@@ -117,7 +119,7 @@ class Base {
    * @description checks if value is greater than or equal to compare
    * @param {any} compare
    */
-  isGTE(compare, options?: compareOptions) {
+  isGTE(compare: any, options: compareOptions = {}) {
     return internalGTE(compare, this, options, this.#options);
   }
 
@@ -125,7 +127,7 @@ class Base {
    * @description checks if value is greater than to compare
    * @param {any} compare
    */
-  isGT(compare, options?: compareOptions) {
+  isGT(compare: any, options: compareOptions = {}) {
     return internalGT(compare, this, options, this.#options);
   }
 
@@ -133,14 +135,14 @@ class Base {
    * @description checks if value is less than or equal to compare
    * @param {any} compare
    */
-  isLTE(compare, options?: compareOptions) {
+  isLTE(compare: any, options: compareOptions = {}) {
     return internalLTE(compare, this, options, this.#options);
   }
   /**
    * @description checks if value is less then to compare
    * @param {any} compare
    */
-  isLT(compare, options?: compareOptions) {
+  isLT(compare: any, options: compareOptions = {}) {
     return internalLT(compare, this, options, this.#options);
   }
 }

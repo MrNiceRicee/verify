@@ -8,7 +8,7 @@ const isGTE = (
   from: Base,
   options: compareOptions,
   internal: internalOptions
-) => {
+): Base => {
   if (!from.verifiedNumber) {
     return error(from, options, internal, `must be a verified number`, {
       step: 'isGTE',
@@ -17,7 +17,7 @@ const isGTE = (
   try {
     Big(compare);
   } catch (err) {
-    return error(from, options, internal, null, {
+    return error(from, options, internal, '', {
       step: 'isGTE',
       overrideError: `${options?.compareName || compare} must be a number`,
     });
