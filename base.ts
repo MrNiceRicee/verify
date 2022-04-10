@@ -31,7 +31,7 @@ class Base {
   failed: boolean;
   compared: any;
   steps: (
-    key: keyOptions | undefined
+    key?: keyOptions | undefined
   ) => boolean | Map<string, boolean> | undefined;
 
   constructor(value: any, options?: initialOptions) {

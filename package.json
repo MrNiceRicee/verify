@@ -1,6 +1,6 @@
 {
   "name": "@mrnicericee/verify",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "my simple verify project",
   "main": "dist/index.umd.min.js",
   "module": "dist/index.es.js",
@@ -11,7 +11,7 @@
   "scripts": {
     "build": "npx tsc",
     "prestart": "npm run test; npm run build",
-    "start": "node ./app",
+    "start": "",
     "dev": "vitest",
     "test": "vitest run",
     "roll": "rollup -c",
