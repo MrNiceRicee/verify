@@ -30,7 +30,7 @@ class Base {
   error: boolean | string;
   failed: boolean;
   compared: any;
-  steps: (key: keyOptions) => boolean | Map<string, boolean>;
+  steps: (key?: keyOptions) => boolean | Map<string, boolean>;
 
   constructor(value, options?: initialOptions) {
     this.value = value;

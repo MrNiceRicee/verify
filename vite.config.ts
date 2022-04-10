@@ -3,6 +3,7 @@ import { defineConfig, configDefaults } from 'vitest/config';
 export default defineConfig({
   test: {
     exclude: [...configDefaults.exclude, 'packages/template/*'],
-    dir: './__TEST__'
+    dir: './TEST',
+    reporters: 'verbose',
   },
 });
