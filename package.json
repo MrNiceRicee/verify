@@ -15,7 +15,7 @@
     "dev": "vitest",
     "test": "vitest run",
     "roll": "rollup -c",
-    "prepublishOnly": "npm build; npm roll"
+    "prepublishOnly": "npm run build; npm run roll"
   },
   "author": "joshcsan@gmail.com",
   "license": "MIT",
