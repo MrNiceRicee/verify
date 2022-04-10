@@ -1,6 +1,6 @@
 {
   "name": "@mrnicericee/verify",
-  "version": "1.0.201",
+  "version": "1.0.3",
   "description": "my simple verify project",
   "main": "dist/index.umd.min.js",
   "module": "dist/index.es.js",
