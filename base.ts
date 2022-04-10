@@ -26,7 +26,7 @@ class Base {
 
   value: any;
   type: string | null;
-  verifiedNumber: Big;
+  verifiedNumber: Big | null;
   error: boolean | string;
   failed: boolean;
   compared: any;
@@ -45,7 +45,7 @@ class Base {
       state: new Map(),
     };
     this.type = null;
-    this.verifiedNumber;
+    this.verifiedNumber = null;
     this.error = false;
     this.failed = false;
     this.compared = null;
