@@ -1,5 +1,5 @@
-import Base from './base';
-import { generalOptions, internalOptions } from './typedefs';
+import Base from '../base';
+import { generalOptions, internalOptions } from '../typedefs';
 import ErrorException from './ErrorException';
 
 interface extra {

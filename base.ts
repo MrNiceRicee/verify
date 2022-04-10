@@ -18,8 +18,8 @@ import internalGTE from './comparison/gte';
 import internalGT from './comparison/gt';
 import internalLTE from './comparison/lte';
 import internalLT from './comparison/lt';
-import Defined from './defined';
-import ErrorException from './ErrorException';
+import Defined from './types/defined';
+import ErrorException from './error/ErrorException';
 
 class Base {
   #options: internalOptions;

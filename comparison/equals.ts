@@ -1,5 +1,5 @@
 import Base from '../base';
-import error from '../error';
+import error from '../error/error';
 import { compareOptions, internalOptions } from '../typedefs';
 
 const isEquals = (

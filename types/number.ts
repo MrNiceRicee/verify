@@ -1,6 +1,6 @@
 import Big from 'big.js';
 import Base from '../base';
-import error from '../error';
+import error from '../error/error';
 import { generalOptions, internalOptions } from '../typedefs';
 
 const isNumber = (
