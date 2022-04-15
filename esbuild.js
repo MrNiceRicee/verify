@@ -6,6 +6,8 @@ build({
   bundle: true,
   sourcemap: true,
   minify: true,
-  platform: 'node',
-  target: ['node10.4'],
-}).catch(() => process.exit(1));
+  splitting: true,
+  format: 'esm',
+  target: ['esnext', 'es2018', 'es6']
+})
+.catch(() => process.exit(1));

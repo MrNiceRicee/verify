@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "target": "esnext",
-    "lib": ["esnext"],
+    "target": "ES2018",
+    "lib": ["esnext", "ES6", "ES7", "DOM"],
     "strict": true,
     "noImplicitAny": false,
     "esModuleInterop": true,

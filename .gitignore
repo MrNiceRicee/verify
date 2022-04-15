@@ -16,3 +16,4 @@ node_modules/
 app/
 dist/
 lib/
+.DS_STORE
