@@ -10,12 +10,11 @@
   ],
   "scripts": {
     "ts-types": " tsc --emitDeclarationOnly --outDir lib",
-    "prebuild": "npm run test",
     "build": "rimraf lib && node ./esbuild.js && npm run ts-types",
     "start": "",
     "dev": "vitest",
     "test": "vitest run",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run test && npm run build"
   },
   "author": "joshcsan@gmail.com",
   "license": "MIT",
