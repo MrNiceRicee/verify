@@ -1,5 +1,5 @@
-import { initialOptions } from './src/typedefs';
-import Base from './src/base';
+import { initialOptions } from './typedefs';
+import Base from './base';
 
 const verify = (value: any, options: initialOptions = {}) => {
   const base = new Base(value, options);

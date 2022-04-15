@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "target": "ES2020",
+    "target": "esnext",
     "lib": ["esnext"],
     "strict": true,
     "noImplicitAny": false,
@@ -10,5 +10,5 @@
     "outDir": "lib"
   },
   "include": ["src"],
-  "exclude": ["node_modules", "TEST"]
+  "exclude": ["node_modules", "TEST", "esbuild.*", "**.test.**"]
 }

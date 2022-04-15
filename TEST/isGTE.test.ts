@@ -1,5 +1,5 @@
 import { expect, describe, it } from 'vitest';
-import Verify from '../index';
+import Verify from '../src/index';
 
 describe('verify isGTE', () => {
   it('error - not verified', () => {

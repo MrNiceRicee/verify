@@ -1,13 +1,11 @@
 const { build } = require('esbuild');
 
 build({
-  entryPoints: ['./index.ts'],
+  entryPoints: ['src/index.ts'],
   outdir: 'lib',
   bundle: true,
   sourcemap: true,
   minify: true,
-  splitting: true,
-  format: 'esm',
-  target: ['esnext'],
+  platform: 'node',
+  target: ['node10.4'],
 }).catch(() => process.exit(1));
-
