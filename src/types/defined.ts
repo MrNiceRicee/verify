@@ -1,8 +1,8 @@
 const isDefined = (value: any) => {
   if (
     value === null ||
-    value === 'null' ||
     value === undefined ||
+    value === 'null' ||
     value === 'undefined'
   ) {
     return false;
