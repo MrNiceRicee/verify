@@ -1,10 +1,5 @@
 const isDefined = (value: any) => {
-  if (
-    value === null ||
-    value === undefined ||
-    value === 'null' ||
-    value === 'undefined'
-  ) {
+  if ([null, undefined, 'null', 'undefined'].includes(value)) {
     return false;
   }
   return true;

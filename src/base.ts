@@ -18,7 +18,10 @@ import internalGTE from './comparison/gte';
 import internalGT from './comparison/gt';
 import internalLTE from './comparison/lte';
 import internalLT from './comparison/lt';
+import internalLengthOf from './comparison/lengthOf';
+
 import Defined from './types/defined';
+import Truthy from './types/truthy';
 import ErrorException from './error/ErrorException';
 
 class Base {
@@ -68,6 +71,10 @@ class Base {
       }
     }
     this.#options.state.set('isDefined', true);
+  }
+
+  isTruthy(options: compareOptions = {}) {
+    return Truthy(this, options, this.#options);
   }
 
   /**
@@ -144,6 +151,14 @@ class Base {
    */
   isLT(compare: any, options: compareOptions = {}) {
     return internalLT(compare, this, options, this.#options);
+  }
+
+  /**
+   * @description checks if value length matches operator selected \
+   * DEFAULT: eq
+   */
+  isLength(compare: any, options: compareOptions = {}) {
+    return internalLengthOf(compare, this, options, this.#options);
   }
 }
 

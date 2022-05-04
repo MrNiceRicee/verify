@@ -14,6 +14,7 @@ interface compareOptions {
   message?: string;
   status?: number;
   compareName?: string;
+  operator?: 'eq' | 'gt' | 'gte' | 'lt' | 'lte' | undefined;
 }
 
 interface internalOptions {
